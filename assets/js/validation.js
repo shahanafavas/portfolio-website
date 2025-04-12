@@ -1,22 +1,28 @@
 function validateform(){
-
-    var name=document.myform.name.value;
-    var email=document.myform.email.value;
-    var Subject=document.myform.subject.value;
-    var message=document.myform.message.value;
-    if(name==null || name=="")
+ var name=document.forms["myform"]["name"].value;
+ 
+ var name=document.forms["myform"]["email"].value;
+ var name=document.forms["myform"]["subject"].value;
+ var name=document.forms["myform"]["message"].value;
+  if(name.trim()=="")
+  {
+    alert("must enter your name");
+    return false;
+  }
+  else if(email.trim()=="")
     {
-        alert('Name box not be blank')
+      alert("must enter your name");
+      return false;
     }
-        else if(subject==null || subject=="")
+  else if(subject.trim()=="")
         {
-            alert('Must give a subject')
+          alert("must enter your name");
+          return false;
         }
-        else if(email){
-
-        }
-        else if(message==null || message=="")
-        {
-             alert('Must write a message')
-        }
-    }
+   else if(message.trim()=="")
+      {
+          alert("must enter your name");
+          return false;
+     }
+     return true;
+}
